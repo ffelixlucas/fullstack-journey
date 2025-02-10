@@ -4,6 +4,7 @@ const valor = document.getElementById("valor");
 const botaoAumentar = document.getElementById("aumentar");
 const botaoDiminuir = document.getElementById("diminuir");
 const botaoZerar = document.getElementById("zerar");
+const botaoDobrar = document.getElementById("dobrar");
 
 function aumentar() {
   contador++;
@@ -38,6 +39,17 @@ function zerar() {
   }
 }
 
+function dobrar() {
+    contador *= 2;
+    valor.textContent = contador;
+    if (contador % 2 === 0) {
+        valor.style.color = "green"; // Par fica verde
+    } else {
+        valor.style.color = "red"; // Ímpar fica vermelho
+    }
+}
+
 botaoAumentar.addEventListener("click", aumentar);
 botaoDiminuir.addEventListener("click", diminuir);
 botaoZerar.addEventListener("click", zerar);
+botaoDobrar.addEventListener("click", dobrar);
