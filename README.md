@@ -57,7 +57,6 @@ O **Fullstack Journey** documenta uma trajetória completa no desenvolvimento fu
 
 ## Estrutura do Projeto
 
-```plaintext
 fullstack-journey/
 ├── README.md          # Documentação do projeto
 ├── .gitignore         # Arquivos e pastas a serem ignorados pelo Git
@@ -66,21 +65,6 @@ fullstack-journey/
 └── script.js          # Lógica JavaScript
 Observação: Conforme o projeto evoluir, novas pastas e arquivos serão adicionados para o backend, testes, deploy e integração contínua.
 
-Instalação e Execução
-Requisitos
-Git
-Node.js (versão LTS recomendada)
-Passos
-Clone o repositório:
-bash
-Copiar
-git clone https://github.com/ffelixlucas/fullstack-journey.git
-Entre na pasta do projeto:
-bash
-Copiar
-cd fullstack-journey
-Abra o projeto no seu editor de código favorito e visualize o arquivo index.html no navegador.
-Instruções adicionais para execução do backend, testes e deploy serão incluídas conforme o projeto evolui.
 
 Fluxo de Trabalho com Git
 Este projeto adota práticas profissionais de versionamento:
