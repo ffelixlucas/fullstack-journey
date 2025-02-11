@@ -91,3 +91,52 @@
 .btn:hover {
     background: var(--cor-secundaria);
 }
+
+/* 7. Estilização da Tabela de Transações */
+.transaction-table {
+    width: 100%;
+    margin-top: var(--espacamento);
+    border-collapse: collapse;
+  }
+  
+  /* Estiliza os títulos das colunas */
+  .transaction-table th {
+    background: var(--cor-primaria);
+    color: white;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Estiliza as células da tabela */
+  .transaction-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--cor-borda);
+    text-align: left;
+  }
+  
+  /* Destaca as transações de receita */
+  .receita {
+    color: green;
+  }
+  
+  /* Destaca as transações de despesa */
+  .despesa {
+    color: red;
+  }
+  
+  /* Ajusta o botão de excluir */
+  .btn-excluir {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  /* Efeito ao passar o mouse */
+  .btn-excluir:hover {
+    background: darkred;
+  }
+  
