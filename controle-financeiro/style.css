@@ -33,3 +33,14 @@
     padding: var(--espacamento);
   }
   
+  /* 2. Estilos Gerais */
+  .container {
+    background: var(--cor-branca);
+    padding: var(--espacamento);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);   
+    text-align: center;
+  }
+
