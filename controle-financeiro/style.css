@@ -139,4 +139,21 @@
   .btn-excluir:hover {
     background: darkred;
   }
+  /* 8. Estilização do Saldo Total */
+.balance {
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    margin-top: var(--espacamento);
+  }
+  
+  /* Se o saldo for positivo */
+  .saldo-positivo {
+    color: green;
+  }
+  
+  /* Se o saldo for negativo */
+  .saldo-negativo {
+    color: red;
+  }
   
