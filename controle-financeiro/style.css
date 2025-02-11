@@ -156,4 +156,35 @@
   .saldo-negativo {
     color: red;
   }
+  /* 9. Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+      width: 100%;
+      max-width: 400px;
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .form-input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .transaction-table th, .transaction-table td {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .balance {
+      font-size: 18px;
+    }
+  }
   
