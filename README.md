@@ -10,6 +10,7 @@ Uma jornada completa no desenvolvimento full stack que une teoria e prática par
 - [Objetivos](#objetivos)
 - [Tecnologias](#tecnologias)
 - [Estrutura do Projeto](#estrutura-do-projeto)
+- [Jornada Full Stack - Etapas Concluídas](#jornada-full-stack-etapas-concluidas)
 - [Instalação e Execução](#instalacao-e-execucao)
 - [Fluxo de Trabalho com Git](#fluxo-de-trabalho-com-git)
 - [Roadmap](#roadmap)
@@ -76,6 +77,33 @@ fullstack-journey/
 
 ---
 
+## Jornada Full Stack - Etapas Concluídas
+
+### **1. Fundamentos de HTML e CSS**
+- **Estrutura HTML:** Criamos a base do projeto, iniciando com um contador simples e evoluindo para um **Dashboard de Controle Financeiro**.
+- **CSS Responsivo:** Implementamos **variáveis CSS** para cores e espaçamento, garantindo um design mais organizado e escalável.
+- **Melhoria na Responsividade:** Ajustamos layouts utilizando **Flexbox** e **Media Queries**, garantindo uma boa experiência em diferentes dispositivos.
+
+### **2. Implementação de JavaScript Básico**
+- **Manipulação do DOM:** Implementamos a **interatividade** do Dashboard, capturando e exibindo transações dinamicamente.
+- **Estruturação do Código:** Aplicamos **funções reutilizáveis** para melhor organização e separação de responsabilidades.
+- **Boas Práticas no Versionamento:** Cada avanço foi registrado no **GitHub**, seguindo padrões de commits claros e objetivos.
+
+### **3. Persistência de Dados com localStorage**
+- **Armazenamento Local:** Adicionamos suporte para salvar transações no `localStorage`, permitindo que os dados persistam mesmo após o recarregamento da página.
+- **Recuperação Automática:** As transações são carregadas automaticamente ao abrir o sistema, garantindo uma **experiência contínua** para o usuário.
+
+### **4. Funcionalidade de Adicionar e Excluir Transações**
+- **Adição de Transações:** Criamos um **formulário dinâmico** que permite cadastrar transações com descrição, valor e categoria.
+- **Exclusão de Transações:** Cada transação pode ser removida da lista, e os dados são automaticamente atualizados no `localStorage`.
+- **Atualização do Saldo:** Sempre que uma transação é adicionada ou excluída, o saldo total é **recalculado automaticamente**.
+
+### **5. Avanço Gradual e Estruturado**
+- **Início com Contador:** Começamos com um **contador** simples para reforçar conceitos fundamentais de **JavaScript e manipulação do DOM**.
+- **Dashboard de Controle Financeiro:** Evoluímos para um **sistema completo de controle financeiro**, incluindo **cadastro de transações, armazenamento local e atualização do saldo**.
+
+---
+
 ## Instalação e Execução
 
 ### Requisitos
@@ -132,33 +160,3 @@ Adotamos práticas profissionais de versionamento:
 
 ---
 
-## Contribuição
-
-Contribuições são muito bem-vindas!
-
-Para colaborar:
-
-1. Faça um **fork** deste repositório.
-2. Crie uma branch para sua funcionalidade:
-   ```bash
-   git checkout -b feature/nome-da-funcionalidade
-   ```
-3. Realize commits com mensagens claras e objetivas.
-4. Envie sua branch para o repositório remoto:
-   ```bash
-   git push origin feature/nome-da-funcionalidade
-   ```
-5. Abra um **Pull Request** para revisão.
-
----
-
-## Licença
-
-Distribuído sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-## Contato
-
-**Lucas Fanha Felix** – [@ffelixlucas](https://github.com/ffelixlucas)  
-Email: [lucas.fafx@gmail.com](mailto:lucas.fafx@gmail.com)
