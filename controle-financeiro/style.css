@@ -1,0 +1,35 @@
+/* 1. Reset e Configurações Globais */
+/* 2. Estilos Gerais */
+/* 3. Estilização do Formulário */
+/* 4. Estilização da Tabela de Transações */
+/* 5. Estilização do Saldo Total */
+/* 6. Responsividade */
+
+/* 1. Reset e Configurações Globais */
+:root {
+    --cor-fundo: #f4f4f4;
+    --cor-branca: #ffffff;
+    --cor-primaria: #28a745;
+    --cor-secundaria: #218838;
+    --cor-texto: #333;
+    --cor-borda: #ccc;
+    --font-padrao: Arial, sans-serif;
+    --espacamento: 20px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-padrao);
+  }
+  
+  body {
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: var(--espacamento);
+  }
+  
