@@ -53,8 +53,24 @@
 }
 
 /* 4. Estilização do Formulário */
-.foirm {
+.form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+/* 5. Estilização dos Inputs do Formulário */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition:  border 0.3s;
+}
+
+/* Efeito ao clicar no input */
+.form-input:focus {
+    border-color: var(--cor-primaria);
 }
