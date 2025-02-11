@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     const form = document.getElementById("transaction-form");
     const transactionsList = document.getElementById("transaction-list");
+    const balanceDisplay = document.getElementById("balance");
   
     if (!form || !transactionsList) {
       console.error("ERRO: Formulário ou lista de transações não encontrados.");
@@ -11,12 +12,18 @@ document.addEventListener("DOMContentLoaded", function () {
   
     console.log("Formulário encontrado com sucesso!");
   
-    form.addEventListener("submit", handleFormSubmit);
+    // Carregar transações do localStorage quando a página é carregada
+    let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
   
-    function handleFormSubmit(event) {
+    // Exibir as transações já salvas
+    transactions.forEach(transaction => {
+      addTransactionToTable(transaction.description, transaction.value, transaction.category);
+    });
+  
+    form.addEventListener("submit", function (event) {
       event.preventDefault(); // Impede o recarregamento da página
   
-      // Captura e valida os dados do formulário
+      // Captura os dados do formulário
       const { description, value, category } = getFormData();
   
       if (!description || isNaN(value) || !category) {
@@ -24,14 +31,22 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
   
-      // Cria e exibe a nova transação
+      // Adiciona a transação ao array de transações
+      const newTransaction = { description, value, category };
+      transactions.push(newTransaction);
+  
+      // Salva as transações no localStorage
+      localStorage.setItem("transactions", JSON.stringify(transactions));
+  
+      // Cria e exibe a transação na tabela
       addTransactionToTable(description, value, category);
   
       // Atualiza o saldo total
       updateBalance();
       resetForm();
-    }
+    });
   
+    // Função para capturar os dados do formulário
     function getFormData() {
       const description = document.getElementById("description").value.trim();
       const value = parseFloat(document.getElementById("value").value.replace(",", "."));
@@ -39,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return { description, value, category };
     }
   
+    // Função para adicionar transação na tabela
     function addTransactionToTable(description, value, category) {
       const newRow = document.createElement("tr");
       newRow.innerHTML = `
@@ -47,20 +63,19 @@ document.addEventListener("DOMContentLoaded", function () {
         <td>${category}</td>
         <td><button class="btn-excluir">X</button></td>
       `;
-  
-      // Adiciona a nova linha à tabela
       transactionsList.appendChild(newRow);
   
-      // Adiciona a funcionalidade de exclusão
+      // Funcionalidade de excluir transação
       const deleteButton = newRow.querySelector(".btn-excluir");
       deleteButton.addEventListener("click", function () {
         newRow.remove();
         updateBalance();
+        removeTransactionFromStorage(description);
       });
     }
   
+    // Função para atualizar o saldo
     function updateBalance() {
-      const balanceDisplay = document.getElementById("balance");
       const rows = transactionsList.getElementsByTagName("tr");
       let total = 0;
       for (let row of rows) {
@@ -71,6 +86,13 @@ document.addEventListener("DOMContentLoaded", function () {
       balanceDisplay.textContent = `R$ ${total.toFixed(2)}`;
     }
   
+    // Função para remover uma transação do localStorage
+    function removeTransactionFromStorage(description) {
+      transactions = transactions.filter(transaction => transaction.description !== description);
+      localStorage.setItem("transactions", JSON.stringify(transactions));
+    }
+  
+    // Função para resetar o formulário
     function resetForm() {
       document.getElementById("description").value = "";
       document.getElementById("value").value = "";
