@@ -8,52 +8,55 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Controle Financeiro</h1>
+    <div class="container">
+      <h1 class="title">Controle Financeiro</h1>
 
-    <!--Formulario para adiconar transação-->
+      <!--Formulario para adiconar transação-->
 
-    <form id="transaction-form">
-      <input
-        type="text"
-        id="description"
-        placeholder="Descrição da transação"
-        required
-      />
-      <input
-        type="number"
-        id="value"
-        placeholder="Valor da transação"
-        required
-      />
+      <form class="form" id="transaction-form">
+        <input
+          type="text"
+          id="description"
+          class="form-input"
+          placeholder="Descrição da transação"
+          required
+        />
+        <input
+          type="number"
+          id="value"
+          class="form-input"
+          placeholder="Valor da transação"
+          required
+        />
 
-      <select id="category">
-        <option value="" disabled selected>Escolha uma categoria</option>
-        <option value="Alimentação">Alimentação</option>
-        <option value="Lazer">Lazer</option>
-        <option value="Transporte">Transporte</option>
-        <option value="Outros">Outros</option>
-      </select>
+        <select id="category" class="form-input">
+          <option value="" disabled selected>Escolha uma categoria</option>
+          <option value="Alimentação">Alimentação</option>
+          <option value="Lazer">Lazer</option>
+          <option value="Transporte">Transporte</option>
+          <option value="Outros">Outros</option>
+        </select>
 
-      <button type="submit">Adicionar Transação</button>
-    </form>
+        <button type="submit" class="btn">Adicionar Transação</button>
+      </form>
 
-
-    <!--Tabela de transações-->
-    <h2>Transações</h2>
-    <table>
+      <!--Tabela de transações-->
+      <h2 class="subtitle">Transações</h2>
+      <table class="transaction-table">
         <thead>
-            <tr>
-                <th>Descrição</th>
-                <th>Valor</th>
-                <th>Categoria</th>
-                <th>Ação</th>
-            </tr>
+          <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Categoria</th>
+            <th>Ação</th>
+          </tr>
         </thead>
         <tbody id="transaction-list">
-            <!--Astransações serão inseridas aqui via JavaScript-->
+          <!--Astransações serão inseridas aqui via JavaScript-->
         </tbody>
-    </table>
+      </table>
 
-    <h2>Saldo Total: <span id="balance">R$ 0,00 </span></h2>
+      <h2 class="subtitle">Saldo Total: <span id="balance" class="balance">R$ 0,00 </span></h2>
+    </div>
   </body>
 </html>
