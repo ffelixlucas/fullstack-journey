@@ -51,3 +51,10 @@
     margin-bottom: 10px;
     text-align: left;
 }
+
+/* 4. Estilização do Formulário */
+.foirm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
