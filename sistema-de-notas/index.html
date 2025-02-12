@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de notas</title>
+
+    <!--Import de estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistemas de Notas</h1>
+
+        <form id="form-notas" class="form--notas">
+            <input type="number" id="nota1" class="input-notas" placeholder="Digite a nota 1" required step="0.01">
+            <input type="number" id="nota2" class="input-notas" placeholder="Digite a nota 2" required step="0.01">
+            <input type="number" id="nota3"  class="input-notas"placeholder="Digite a nota 3" required step="0.01">
+            <button  type="button" id="btn-calcular" class="btn-calcular" aria-label="Calcular Média">Calcular</button>
+        </form>
+
+        <h2 id="resultado" class="result">Aguardando cálculo...</h2>
+    </div>
+
+    <!--Import do JS-->
+    <script src="script.js"></script>
+</body>
+</html>
