@@ -1,162 +1,78 @@
-# Fullstack Journey
+# Fullstack Journey 🚀
 
-Uma jornada completa no desenvolvimento full stack que une teoria e prática para construir aplicações web modernas e escaláveis. Este projeto serve como guia de estudo e portfólio, demonstrando a evolução de um código simples para uma aplicação robusta e profissional.
+Uma jornada prática no desenvolvimento full stack, unindo teoria e código para construir aplicações web modernas e escaláveis. Este projeto documenta a evolução de pequenos desafios até uma aplicação robusta e profissional.
 
 ---
 
-## Índice
+## 📌 Índice
 
-- [Visão Geral](#visao-geral)
-- [Objetivos](#objetivos)
+- [Visão Geral](#visão-geral)
 - [Tecnologias](#tecnologias)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Jornada Full Stack - Etapas Concluídas](#jornada-full-stack-etapas-concluidas)
-- [Instalação e Execução](#instalacao-e-execucao)
-- [Fluxo de Trabalho com Git](#fluxo-de-trabalho-com-git)
+- [Etapas Concluídas](#etapas-concluídas)
+- [Como Executar](#como-executar)
 - [Roadmap](#roadmap)
-- [Contribuição](#contribuicao)
-- [Licença](#licenca)
 - [Contato](#contato)
 
 ---
 
-## Visão Geral
+## 🔍 Visão Geral
 
-O **Fullstack Journey** documenta uma trajetória completa no desenvolvimento full stack, integrando teoria e prática para ensinar desde os fundamentos do frontend (HTML, CSS, JavaScript) até a construção de um backend robusto com Node.js e Express. O projeto também abrange a integração com bancos de dados, autenticação, segurança e deploy, sempre seguindo as melhores práticas de codificação e versionamento.
-
----
-
-## Objetivos
-
-- **Aprendizado Profundo:**  
-  Consolidar os conceitos essenciais do desenvolvimento web moderno.
-  
-- **Boas Práticas:**  
-  Adotar padrões de código, organização profissional e versionamento eficaz.
-  
-- **Portfólio Real:**  
-  Desenvolver uma aplicação completa que demonstre competências full stack.
-  
-- **Colaboração e Deploy:**  
-  Aprender a utilizar Git, GitHub e ferramentas de CI/CD para um fluxo de trabalho colaborativo e de qualidade.
+O **Fullstack Journey** documenta minha trajetória no desenvolvimento full stack, desde os fundamentos do **HTML, CSS e JavaScript**, até a implementação de funcionalidades mais avançadas no backend com **Node.js e Express**. O objetivo é demonstrar um aprendizado contínuo e aplicável.
 
 ---
 
-## Tecnologias
+## 🛠 Tecnologias
 
-### Frontend
-- **HTML5:** Estrutura semântica e acessível.
-- **CSS3:** Flexbox, Grid e Media Queries para layouts responsivos.
-- **JavaScript:** ES6+ e recursos modernos.
-
-### Versionamento
-- **Git** e **GitHub**
-
-### Backend (planejado para etapas futuras)
-- **Node.js** e **Express.js**
-- **Banco de Dados:** MySQL, PostgreSQL ou MongoDB.
-- **ORMs:** Sequelize ou Prisma.
-
-### Deploy e CI/CD (planejado)
-- Ferramentas como **Vercel**, **Netlify**, **Railway**, entre outras.
+✔ **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+✔ **Backend:** (planejado) Node.js, Express.js, Banco de Dados
+✔ **Versionamento:** Git e GitHub
+✔ **Deploy (Futuro):** Vercel, Netlify, Railway
 
 ---
 
-## Estrutura do Projeto
+## 📈 Etapas Concluídas
 
+### ✅ **Fundamentos de HTML e CSS**
+📌 Estruturamos o projeto e implementamos **CSS responsivo** com variáveis e Flexbox.
+
+### ✅ **Interação com JavaScript**
+📌 Manipulamos o **DOM**, criamos eventos e desenvolvemos funcionalidades dinâmicas.
+
+### ✅ **Sistema de Notas** 📊
+📌 Criamos um **formulário dinâmico** para capturar notas e calcular a média.
+📌 Implementamos **validação de dados**, destacando a nota com **cores dinâmicas**.
+📌 Melhoramos a **experiência do usuário**, exibindo mensagens de **Aprovado 🎉** ou **Reprovado 😢**.
+
+🔜 **Mais desafios virão!**
+
+---
+
+## ▶ Como Executar
+
+1️⃣ **Clone o repositório:**
+```bash
+git clone https://github.com/ffelixlucas/fullstack-journey.git
 ```
-fullstack-journey/
-├── README.md          # Documentação do projeto
-├── .gitignore         # Arquivos e pastas a serem ignorados pelo Git
-├── index.html         # Página principal (Frontend)
-├── styles.css         # Estilos CSS
-└── script.js          # Lógica JavaScript
+2️⃣ **Acesse o projeto:**
+```bash
+cd fullstack-journey
 ```
-
-> **Observação:** Conforme o projeto evoluir, novas pastas e arquivos serão adicionados para o backend, testes, deploy e integração contínua.
-
----
-
-## Jornada Full Stack - Etapas Concluídas
-
-### **1. Fundamentos de HTML e CSS**
-- **Estrutura HTML:** Criamos a base do projeto, iniciando com um contador simples e evoluindo para um **Dashboard de Controle Financeiro**.
-- **CSS Responsivo:** Implementamos **variáveis CSS** para cores e espaçamento, garantindo um design mais organizado e escalável.
-- **Melhoria na Responsividade:** Ajustamos layouts utilizando **Flexbox** e **Media Queries**, garantindo uma boa experiência em diferentes dispositivos.
-
-### **2. Implementação de JavaScript Básico**
-- **Manipulação do DOM:** Implementamos a **interatividade** do Dashboard, capturando e exibindo transações dinamicamente.
-- **Estruturação do Código:** Aplicamos **funções reutilizáveis** para melhor organização e separação de responsabilidades.
-- **Boas Práticas no Versionamento:** Cada avanço foi registrado no **GitHub**, seguindo padrões de commits claros e objetivos.
-
-### **3. Persistência de Dados com localStorage**
-- **Armazenamento Local:** Adicionamos suporte para salvar transações no `localStorage`, permitindo que os dados persistam mesmo após o recarregamento da página.
-- **Recuperação Automática:** As transações são carregadas automaticamente ao abrir o sistema, garantindo uma **experiência contínua** para o usuário.
-
-### **4. Funcionalidade de Adicionar e Excluir Transações**
-- **Adição de Transações:** Criamos um **formulário dinâmico** que permite cadastrar transações com descrição, valor e categoria.
-- **Exclusão de Transações:** Cada transação pode ser removida da lista, e os dados são automaticamente atualizados no `localStorage`.
-- **Atualização do Saldo:** Sempre que uma transação é adicionada ou excluída, o saldo total é **recalculado automaticamente**.
-
-### **5. Avanço Gradual e Estruturado**
-- **Início com Contador:** Começamos com um **contador** simples para reforçar conceitos fundamentais de **JavaScript e manipulação do DOM**.
-- **Dashboard de Controle Financeiro:** Evoluímos para um **sistema completo de controle financeiro**, incluindo **cadastro de transações, armazenamento local e atualização do saldo**.
+3️⃣ **Abra o `index.html` no navegador.**
 
 ---
 
-## Instalação e Execução
+## 🚀 Roadmap Futuro
 
-### Requisitos
-- **Git**
-- **Node.js** (versão LTS recomendada)
-
-### Passos
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/ffelixlucas/fullstack-journey.git
-   ```
-2. **Acesse o diretório do projeto:**
-   ```bash
-   cd fullstack-journey
-   ```
-3. **Abra o projeto:**  
-   Utilize seu editor de código favorito e visualize o arquivo `index.html` no navegador.
-
-*Instruções adicionais para execução do backend, testes e deploy serão adicionadas conforme o projeto evolui.*
+🔹 **Adição de novas funcionalidades no Sistema de Notas**
+🔹 **Integração com Banco de Dados**
+🔹 **Criação de um Backend com APIs REST**
+🔹 **Site no GitHub com demonstrações interativas**
 
 ---
 
-## Fluxo de Trabalho com Git
+## 📬 Contato
 
-Adotamos práticas profissionais de versionamento:
+**Lucas Fanha Felix** – [@ffelixlucas](https://github.com/ffelixlucas)  
+Email: [lucas.fafx@gmail.com](mailto:lucas.fafx@gmail.com)
 
-- **Commits:**  
-  Utilize mensagens claras e descritivas (ex.: `feat: adiciona header com navegação`).
-
-- **Branching:**  
-  Crie branches específicas para novas funcionalidades (ex.: `feature/nome-da-funcionalidade`) e utilize pull requests para revisar as mudanças antes de mesclar na branch principal.
-
-- **Integração Contínua:**  
-  Planejamos integrar ferramentas de CI/CD para automatizar testes e deploy, garantindo um fluxo de trabalho eficiente e profissional.
-
----
-
-## Roadmap
-
-1. **Setup Inicial:**  
-   Estrutura básica com HTML, CSS e JavaScript.
-2. **Aprofundamento em JavaScript:**  
-   Implementação de conceitos modernos (ES6+, modularização, etc.).
-3. **Integração com Git/GitHub:**  
-   Práticas avançadas de versionamento e colaboração.
-4. **Desenvolvimento Backend:**  
-   Criação de APIs RESTful com Node.js e Express.
-5. **Banco de Dados:**  
-   Integração com banco de dados e utilização de ORMs.
-6. **Autenticação e Segurança:**  
-   Implementação de login seguro com JWT e criptografia.
-7. **Deploy e CI/CD:**  
-   Configuração de deploy automático e integração contínua.
-
----
 
