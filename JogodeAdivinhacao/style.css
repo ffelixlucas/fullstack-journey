@@ -1,0 +1,82 @@
+/* Reset básico para remover margens e paddings indesejados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilização do body com um background gradiente e centralização dos elementos */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ABE2, #5563DE);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Título principal */
+  h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Parágrafos explicativos */
+  p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Estilização do input: tamanho, alinhamento e borda arredondada */
+  .input-chute {
+    width: 80%;
+    max-width: 300px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Botão estilizado com transição para hover */
+  button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #5563DE;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Efeito hover para o botão */
+  button:hover {
+    background-color: #e6e6e6;
+    transform: scale(1.05);
+  }
+  
+  /* Elemento que exibe as tentativas */
+  #tentativas {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  /* Mensagem principal do jogo */
+  .msg {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #fff;
+  }
+  
