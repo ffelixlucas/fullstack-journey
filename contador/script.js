@@ -6,47 +6,44 @@ const botaoDiminuir = document.getElementById("diminuir");
 const botaoZerar = document.getElementById("zerar");
 const botaoDobrar = document.getElementById("dobrar");
 
-function aumentar() {
-  contador++;
-  valor.textContent = contador;
-  if (contador % 2 === 0) {
+
+function atualizarInterface (){
+valor.textContent = contador;
+
+  if (contador === 0) {
+    valor.style.color = "black"; // Zero volta para preto
+  } else if (contador % 2 === 0) {
     valor.style.color = "green"; // Par fica verde
   } else {
-    valor.style.color = "red"; // Impar fica vermelho
+    valor.style.color = "red"; // Ímpar fica vermelho
   }
 }
 
+function aumentar() {
+  contador++;
+  atualizarInterface();
+
+}
+
 function diminuir() {
+
     if (contador > 0) {
       contador--;
-      valor.textContent = contador;
-  
-      if (contador === 0) {
-        valor.style.color = "black"; // Zero volta para preto
-      } else if (contador % 2 === 0) {
-        valor.style.color = "green"; // Par fica verde
-      } else {
-        valor.style.color = "red"; // Ímpar fica vermelho
-      }
+      atualizarInterface();
+
     }
   }
 
 function zerar() {
   contador = 0;
-  valor.textContent = contador;
-  if (contador === 0) {
-    valor.style.color = "black"; // Zero volta para preto
-  }
+  atualizarInterface();
+
+  
 }
 
 function dobrar() {
-    contador *= 2;
-    valor.textContent = contador;
-    if (contador % 2 === 0) {
-        valor.style.color = "green"; // Par fica verde
-    } else {
-        valor.style.color = "red"; // Ímpar fica vermelho
-    }
+    contador *= 2;   
+    atualizarInterface();
 }
 
 botaoAumentar.addEventListener("click", aumentar);
