@@ -210,7 +210,35 @@ ul {
   .projects__button:hover {
     background-color: var(--first-color-alt);
   }
-    
+
+  .services__lista {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .services__item {
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .services__item h3 {
+    color: var(--first-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .services__item p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.5;
+  }
+  
   
 
 @media screen and (max-width: 768px) {
