@@ -1,0 +1,190 @@
+/* 1. Reset e Configurações Globais */
+:root {
+    --cor-fundo: #f4f4f4;
+    --cor-branca: #ffffff;
+    --cor-primaria: #28a745;
+    --cor-secundaria: #218838;
+    --cor-texto: #333;
+    --cor-borda: #ccc;
+    --font-padrao: Arial, sans-serif;
+    --espacamento: 20px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-padrao);
+  }
+  
+  body {
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: var(--espacamento);
+  }
+  
+  /* 2. Estilos Gerais */
+  .container {
+    background: var(--cor-branca);
+    padding: var(--espacamento);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);   
+    text-align: center;
+  }
+
+/* 3. Estilização do Título e Subtítulos */
+.title {
+    font-size: 24px;
+    color: var(--cor-texto);
+    margin-bottom: var(--espacamento);
+}
+
+.subtitle {
+    font-size: 20px;
+    color: var(--cor-texto);
+    margin-top: var(--espacamento);
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* 4. Estilização do Formulário */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 5. Estilização dos Inputs do Formulário */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition:  border 0.3s;
+}
+
+/* Efeito ao clicar no input */
+.form-input:focus {
+    border-color: var(--cor-primaria);
+}
+
+/* 6. Estilização do Botão */
+.btn {
+    background: var(--cor-primaria);
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+} 
+
+/* Efeito ao passar o mouse no botão */
+.btn:hover {
+    background: var(--cor-secundaria);
+}
+
+/* 7. Estilização da Tabela de Transações */
+.transaction-table {
+    width: 100%;
+    margin-top: var(--espacamento);
+    border-collapse: collapse;
+  }
+  
+  /* Estiliza os títulos das colunas */
+  .transaction-table th {
+    background: var(--cor-primaria);
+    color: white;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Estiliza as células da tabela */
+  .transaction-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--cor-borda);
+    text-align: left;
+  }
+  
+  /* Destaca as transações de receita */
+  .receita {
+    color: green;
+  }
+  
+  /* Destaca as transações de despesa */
+  .despesa {
+    color: red;
+  }
+  
+  /* Ajusta o botão de excluir */
+  .btn-excluir {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  /* Efeito ao passar o mouse */
+  .btn-excluir:hover {
+    background: darkred;
+  }
+  /* 8. Estilização do Saldo Total */
+.balance {
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    margin-top: var(--espacamento);
+  }
+  
+  /* Se o saldo for positivo */
+  .saldo-positivo {
+    color: green;
+  }
+  
+  /* Se o saldo for negativo */
+  .saldo-negativo {
+    color: red;
+  }
+  /* 9. Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+      width: 100%;
+      max-width: 400px;
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .form-input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .transaction-table th, .transaction-table td {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .balance {
+      font-size: 18px;
+    }
+  }
+  
