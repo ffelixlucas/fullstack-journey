@@ -1,129 +1,582 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8" />
-  <!-- META viewport para responsividade e escalabilidade-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- META para compatibilidade com o Internet Explorer -->
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!-- META para descrição do site -->
-  <meta name="description" content="Descrição do site" />
-  <!-- META para palavras-chave do site -->
-  <meta name="keywords" content="palavra-chave1, palavra-chave2, palavra-chave3" />
-  <!-- META para autor do site -->
-  <meta name="author" content="Autor do site" />
-  <!-- META para robots -->
-  <meta name="robots" content="index, follow" />
-  <!-- META para idioma -->
-  <meta name="language" content="Portuguese" />
-  <!-- META para favicon -->
-  <link rel="icon" href="favicon.ico" />
-
-  <!-- Título significativo para SEO e identificação -->
-
-  <title>Projeto Profissional - Landing Page</title>
-
-  <!-- Link externo para o CSS, separando responsabilidades -->
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Portfólio profissional de Lucas - Desenvolvedor Full Stack com foco em soluções criativas e eficientes">
+  <meta name="keywords" content="desenvolvedor, full stack, portfólio, JavaScript, front-end, back-end">
+  <meta name="author" content="Lucas">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Portuguese">
+  <link rel="icon" href="favicon.ico">
+  <title>Lucas | Desenvolvedor Full Stack</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-  <!-- Cabeçalho com navegação e logo para identificação rápida -->
-  <header>
-    <h1>Minha Landing Page Profissional</h1>
-    <!-- Exemplo de navegação semântica, importante para usabilidade -->
-    <nav>
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#projects">Projetos</a></li>
-        <li><a href="#services">Serviços</a></li>
-        <li><a href="#experience">Experiencias</a></li>
-        <li><a href="#contact">contato</a></li>
+  <!-- Menu de Navegação -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">Lucas<span>.</span></a>
+      
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link active-link">Início</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">Sobre</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Habilidades</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projetos</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contato</a></li>
+        </ul>
+        
+        <div class="nav__close" id="nav-close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
 
-      </ul>
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </nav>
   </header>
 
-  <!-- Conteúdo principal, onde o foco do usuário está -->
-  <main id="main">
-
+  <main class="main">
+    <!-- Seção Home -->
     <section class="home section" id="home">
-      <div class="container grid home__container">
-        <div class="home__data">
-          <h1 class="home__title">Oi, eu sou o Lucas 👋</h1>
-          <h2 class="home__subtitle">Desenvolvedor Full stack em construção</h2>
-          <p class="home__description">
-            Apaixonado por resolver problemas com código e transformar ideias em experiências digitais. Aprendendo todos
-            os dias com propósito.
+      <div class="home__container container grid">
+        <div class="home__content">
+          <div class="home__data">
+            <h1 class="home__title">
+              Olá, eu sou <span>Lucas</span>
+              <span class="home__hand">
+                <i class="fa-solid fa-hand-peace"></i>
+              </span>
+            </h1>
+            <h2 class="home__subtitle">Desenvolvedor Full Stack</h2>
+            <p class="home__description">
+              Transformo ideias em experiências digitais impactantes. 
+              Combino habilidades técnicas com compreensão humana para criar soluções que realmente fazem diferença.
+            </p>
+            
+            <div class="home__buttons">
+              <a href="#contact" class="button button--primary">
+                Contate-me <i class="fa-solid fa-paper-plane button__icon"></i>
+              </a>
+              <a href="#projects" class="button button--ghost">
+                Meus Projetos <i class="fa-solid fa-arrow-down button__icon"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="home__social">
+            <a href="https://www.linkedin.com/in/lucasfanhafelix/" target="_blank" class="home__social-link">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/ffelixlucas" target="_blank" class="home__social-link">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://x.com/ffelixlucas" target="_blank" class="home__social-link">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="home__image">
+          <div class="home__blob">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="blob-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff4d4d" />
+                  <stop offset="100%" stop-color="#f9cb28" />
+                </linearGradient>
+              </defs>
+              <path fill="url(#blob-gradient)" d="M45.9,-65.7C58.7,-56.2,68.1,-41.2,73.8,-24.4C79.5,-7.6,81.5,11,75.3,26.3C69.1,41.6,54.7,53.6,38.6,62.2C22.5,70.8,4.7,76.1,-12.9,72.3C-30.5,68.5,-48,55.7,-60.2,39.4C-72.4,23.1,-79.3,3.3,-76.5,-15.1C-73.7,-33.5,-61.2,-50.5,-45.7,-59.6C-30.2,-68.7,-11.6,-69.8,5.7,-76.8C23,-83.8,46,-96.6,45.9,-65.7Z" transform="translate(100 100)" />
+            </svg>
+            <img src="assets/img/lucas.png" alt="Foto de perfil de Lucas" class="home__blob-img">
+          </div>
+        </div>
+      </div>
+      
+      <div class="home__scroll">
+        <a href="#about" class="home__scroll-button">
+          <i class="fa-solid fa-mouse"></i>
+          <span class="home__scroll-name">Role para baixo</span>
+          <i class="fa-solid fa-arrow-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section class="about section" id="about">
+      <div class="about__container container grid">
+        <div class="about__image">
+          <img src="assets/img/fotolinkedin.jpg" alt="Lucas trabalhando" class="about__img">
+          <div class="about__shadow"></div>
+        </div>
+        
+        <div class="about__content">
+          <h2 class="section__title">
+            Minha <span>Jornada</span>
+          </h2>
+          
+          <p class="about__description">
+            Desde cedo tive contato com a tecnologia, cursando <strong>Técnico em Informática</strong> durante o ensino médio. Depois, vivi a <strong>disciplina</strong> e a <strong>responsabilidade</strong> no Exército, e mais tarde aprofundei minha visão de processos com a <strong>Logística</strong>. Hoje, caminho com foco em me tornar um <strong>desenvolvedor full stack</strong>, unindo bagagem técnica, resiliência e paixão por criar soluções completas e funcionais.
           </p>
-          <a href="#projects" class="home__button">Ver Projetos</a>
-        </div>
-        <div class="home__img">
-          <img src="assets/img/lucas.png" alt="Foto de Lucas">
+          
+          
+          <div class="about__info">
+            <div class="about__box">
+              <i class="fa-solid fa-award about__icon"></i>
+              <h3 class="about__title">Experiência</h3>
+              <span class="about__subtitle">3+ anos</span>
+            </div>
+            
+            <div class="about__box">
+              <i class="fa-solid fa-briefcase about__icon"></i>
+              <h3 class="about__title">Projetos</h3>
+              <span class="about__subtitle">20+ completos</span>
+            </div>
+            
+            <div class="about__box">
+              <i class="fa-solid fa-headset about__icon"></i>
+              <h3 class="about__title">Suporte</h3>
+              <span class="about__subtitle">Online 24/7</span>
+            </div>
+          </div>
+          
+          <div class="about__buttons">
+            <a href="#contact" class="button">Contate-me</a>
+            <a href="#" class="button button--ghost">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
+   <!-- Seção Habilidades -->
+<section class="skills section" id="skills">
+  <h2 class="section__title">Minhas <span>Habilidades</span></h2>
+  <span class="section__subtitle">Minha trajetória técnica em construção</span>
+
+  <div class="skills__container container grid">
+    <div class="skills__content">
+      <h3 class="skills__title">Frontend</h3>
+      <div class="skills__box">
+        <div class="skills__group">
+          <div class="skills__data">
+            <i class="fa-brands fa-html5"></i>
+            <div>
+              <h3 class="skills__name">HTML5</h3>
+              <span class="skills__level">Avançado</span>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <i class="fa-brands fa-css3-alt"></i>
+            <div>
+              <h3 class="skills__name">CSS3</h3>
+              <span class="skills__level">Intermediário</span>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <i class="fa-brands fa-js"></i>
+            <div>
+              <h3 class="skills__name">JavaScript</h3>
+              <span class="skills__level">Intermediário</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__group">
+          <div class="skills__data">
+            <i class="fa-brands fa-react"></i>
+            <div>
+              <h3 class="skills__name">React</h3>
+              <span class="skills__level">Intermediário</span>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <div>
+              <h3 class="skills__name">Responsividade</h3>
+              <span class="skills__level">Avançado</span>
+            </div>
+          </div>
+
+          </div>
+      </div>
+    </div>
+
+    <div class="skills__content">
+      <h3 class="skills__title">Backend</h3>
+      <div class="skills__box">
+        <div class="skills__group">
+          <div class="skills__data">
+            <i class="fa-brands fa-node-js"></i>
+            <div>
+              <h3 class="skills__name">Node.js</h3>
+              <span class="skills__level">Intermediário</span>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <i class="fa-solid fa-database"></i>
+            <div>
+              <h3 class="skills__name">MySQL</h3>
+              <span class="skills__level">Intermediário</span>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <i class="fa-solid fa-server"></i>
+            <div>
+              <h3 class="skills__name">APIs REST</h3>
+              <span class="skills__level">Intermediário</span>
+            </div>
+          </div>
+        </div>
+
+        
+          <div class="skills__data">
+            <i class="fa-solid fa-lock"></i>
+            <div>
+              <h3 class="skills__name">Autenticação JWT</h3>
+              <span class="skills__level">Intermediário</span>
+            </div>
+          </div>
+
+          <div class="skills__data">
+            <i class="fa-solid fa-check-double"></i>
+            <div>
+              <h3 class="skills__name">Integrações (ex: Mercado Pago)</h3>
+              <span class="skills__level">Intermediário</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Seção Soft Skills -->
+    <section class="soft-skills section">
+      <h2 class="section__title">Habilidades <span>Comportamentais</span></h2>
+      <span class="section__subtitle">O que me diferencia como profissional</span>
+      
+      <div class="soft-skills__container container grid">
+        <div class="soft-skills__card">
+          <div class="soft-skills__icon">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <h3 class="soft-skills__title">Trabalho em Equipe</h3>
+          <p class="soft-skills__description">
+            Colaboração eficiente, comunicação clara e capacidade de adaptação a diferentes personalidades.
+          </p>
+        </div>
+        
+        <div class="soft-skills__card">
+          <div class="soft-skills__icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3 class="soft-skills__title">Resolução de Problemas</h3>
+          <p class="soft-skills__description">
+            Abordagem analítica combinada com criatividade para encontrar soluções inovadoras.
+          </p>
+        </div>
+        
+        <div class="soft-skills__card">
+          <div class="soft-skills__icon">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="soft-skills__title">Aprendizado Contínuo</h3>
+          <p class="soft-skills__description">
+            Curiosidade intelectual e disciplina para me manter atualizado com as novas tecnologias.
+          </p>
+        </div>
+        
+        <div class="soft-skills__card">
+          <div class="soft-skills__icon">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3 class="soft-skills__title">Inteligência Emocional</h3>
+          <p class="soft-skills__description">
+            Autoconhecimento, empatia e gestão de conflitos para ambientes de trabalho harmoniosos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Projetos -->
     <section class="projects section" id="projects">
-      <div class="projects__container">
+      <h2 class="section__title">Projetos <span>Recentes</span></h2>
+      <span class="section__subtitle">Meu trabalho prático</span>
+      
+      <div class="projects__container container">
+        <!-- Projeto 1 -->
         <div class="projects__card">
-          <img src="assets/img/placeholder-contador.png" alt="Imagem do projeto" class="projects__img">
-          <h3 class="projects__title">Contador JS</h3>
-          <p class="projects__description">Um contador com JavaScript que aumenta, diminui, zera e mostra se o número é
-            par ou ímpar.</p>
-          <a href="../contador/contador.html" target="_blank" class="projects__button">Ver Projeto</a>
+          <img src="assets/img/placeholder-contador.png" alt="Projeto Contador JS" class="projects__img">
+          
+          <div class="projects__modal">
+            <div class="projects__modal-content">
+              <h3 class="projects__modal-title">Contador JS</h3>
+              <p class="projects__modal-description">
+                Contador interativo com JavaScript que aumenta, diminui, zera e identifica números pares/ímpares.
+              </p>
+              
+              <ul class="projects__modal-list">
+                <li class="projects__modal-item">
+                  <i class="fa-solid fa-check projects__modal-icon"></i>
+                  <span class="projects__modal-info">JavaScript puro</span>
+                </li>
+                
+                <li class="projects__modal-item">
+                  <i class="fa-solid fa-check projects__modal-icon"></i>
+                  <span class="projects__modal-info">Design responsivo</span>
+                </li>
+                
+                <li class="projects__modal-item">
+                  <i class="fa-solid fa-check projects__modal-icon"></i>
+                  <span class="projects__modal-info">Lógica limpa</span>
+                </li>
+              </ul>
+              
+              <div class="projects__modal-buttons">
+                <a href="#" class="projects__modal-link">
+                  <i class="fa-solid fa-eye"></i> Demo
+                </a>
+                <a href="#" class="projects__modal-link">
+                  <i class="fa-brands fa-github"></i> Código
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+        
+        <!-- Projeto 2 -->
         <div class="projects__card">
-          <img src="assets/img/placeholder-to-do-list.png" alt="Prévia do projeto To-Do List" class="projects__img">
-          <h3 class="projects__title">To-Do List</h3>
-          <p class="projects__description">Lista de tarefas com JavaScript que permite adicionar, marcar como concluido
-            e remover itens dinamicamente.</p>
-          <a href="../caixinha-de-tarefas/index.html" target="_blank" class="projects__button">Ver Projeto</a>
+          <img src="assets/img/placeholder-to-do-list.png" alt="Projeto To-Do List" class="projects__img">
+          
+          <div class="projects__modal">
+            <div class="projects__modal-content">
+              <h3 class="projects__modal-title">To-Do List</h3>
+              <p class="projects__modal-description">
+                Aplicativo de lista de tarefas com funcionalidades completas de CRUD usando JavaScript.
+              </p>
+              
+              <ul class="projects__modal-list">
+                <li class="projects__modal-item">
+                  <i class="fa-solid fa-check projects__modal-icon"></i>
+                  <span class="projects__modal-info">LocalStorage</span>
+                </li>
+                
+                <li class="projects__modal-item">
+                  <i class="fa-solid fa-check projects__modal-icon"></i>
+                  <span class="projects__modal-info">UI intuitiva</span>
+                </li>
+                
+                <li class="projects__modal-item">
+                  <i class="fa-solid fa-check projects__modal-icon"></i>
+                  <span class="projects__modal-info">Animações CSS</span>
+                </li>
+              </ul>
+              
+              <div class="projects__modal-buttons">
+                <a href="#" class="projects__modal-link">
+                  <i class="fa-solid fa-eye"></i> Demo
+                </a>
+                <a href="#" class="projects__modal-link">
+                  <i class="fa-brands fa-github"></i> Código
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Projeto 3 -->
+        <div class="projects__card">
+          <img src="assets/img/project3.jpg" alt="Projeto API Clima" class="projects__img">
+          
+          <div class="projects__modal">
+            <div class="projects__modal-content">
+              <h3 class="projects__modal-title">API de Clima</h3>
+              <p class="projects__modal-description">
+                Aplicativo que consome API de previsão do tempo com busca por localização.
+              </p>
+              
+              <ul class="projects__modal-list">
+                <li class="projects__modal-item">
+                  <i class="fa-solid fa-check projects__modal-icon"></i>
+                  <span class="projects__modal-info">Fetch API</span>
+                </li>
+                
+                <li class="projects__modal-item">
+                  <i class="fa-solid fa-check projects__modal-icon"></i>
+                  <span class="projects__modal-info">Geolocalização</span>
+                </li>
+                
+                <li class="projects__modal-item">
+                  <i class="fa-solid fa-check projects__modal-icon"></i>
+                  <span class="projects__modal-info">Tratamento de erros</span>
+                </li>
+              </ul>
+              
+              <div class="projects__modal-buttons">
+                <a href="#" class="projects__modal-link">
+                  <i class="fa-solid fa-eye"></i> Demo
+                </a>
+                <a href="#" class="projects__modal-link">
+                  <i class="fa-brands fa-github"></i> Código
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="services section" id="services">
-      <h2 class="section__title">Como eu posso agregar valor</h2>
-    
-      <div class="services__lista">
-        <div class="services__item">
-          <h3>Código limpo e organizado</h3>
-          <p>Entrego soluções com boa legibilidade, seguindo boas práticas e facilitando futuras manutenções.</p>
-        </div>
-        <div class="services__item">
-          <h3>Projetos bem estruturados</h3>
-          <p>Divisão clara entre arquivos, versionamento com Git e uso de pastas separadas para lógica, estilos e conteúdos.</p>
-        </div>
-        <div class="services__item">
-          <h3>Experiência real com APIs e JavaScript</h3>
-          <p>Construo funcionalidades que se conectam com dados reais usando JavaScript, REST e integração com back-end.</p>
-        </div>
-        <div class="services__item">
-          <h3>Responsividade e atenção ao layout</h3>
-          <p>Seus projetos vão funcionar bem em celulares, tablets e desktops, com um visual bonito e coerente.</p>
-        </div>
-      </div>
-    </section>
-    
-    
-
-    <section class="experience section" id="experience">
-    </section>
+    <!-- Seção Contato -->
     <section class="contact section" id="contact">
-      <a href="#" class="botao-cta">Quero Comprar</a>
-
+      <h2 class="section__title">Entre em <span>Contato</span></h2>
+      <span class="section__subtitle">Vamos conversar sobre seu projeto</span>
+      
+      <div class="contact__container container grid">
+        <div class="contact__content">
+          <h3 class="contact__title">Fale comigo</h3>
+          
+          <div class="contact__info">
+            <div class="contact__card">
+              <i class="fa-solid fa-envelope contact__card-icon"></i>
+              <h3 class="contact__card-title">Email</h3>
+              <span class="contact__card-data">lucas.fafx@gmail.com</span>
+              <a href="mailto:lucas.fafx@gmail.com" class="contact__button">
+                Escreva-me <i class="fa-solid fa-arrow-right contact__button-icon"></i>
+              </a>
+            </div>
+            
+            <div class="contact__card">
+              <i class="fa-brands fa-whatsapp contact__card-icon"></i>
+              <h3 class="contact__card-title">WhatsApp</h3>
+              <span class="contact__card-data">+55 (41) 9 9964-4302</span>
+              <a href="https://wa.me/5541999644302" target="_blank" class="contact__button">
+                Envie mensagem <i class="fa-solid fa-arrow-right contact__button-icon"></i>
+              </a>
+            </div>
+            
+            <div class="contact__card">
+              <i class="fa-brands fa-linkedin-in contact__card-icon"></i>
+              <h3 class="contact__card-title">LinkedIn</h3>
+              <span class="contact__card-data">linkedin.com/in/lucasfanhafelix/</span>
+              <a href="https://www.linkedin.com/in/lucasfanhafelix/" target="_blank" class="contact__button">
+                Conecte-se <i class="fa-solid fa-arrow-right contact__button-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact__content">
+          <h3 class="contact__title">Ou envie uma mensagem</h3>
+          
+          <form action="" class="contact__form">
+            <div class="contact__form-div">
+              <label for="name" class="contact__form-tag">Nome</label>
+              <input type="text" id="name" name="name" class="contact__form-input" placeholder="Seu nome completo">
+            </div>
+            
+            <div class="contact__form-div">
+              <label for="email" class="contact__form-tag">Email</label>
+              <input type="email" id="email" name="email" class="contact__form-input" placeholder="Seu melhor email">
+            </div>
+            
+            <div class="contact__form-div">
+              <label for="subject" class="contact__form-tag">Assunto</label>
+              <input type="text" id="subject" name="subject" class="contact__form-input" placeholder="Sobre o que deseja falar?">
+            </div>
+            
+            <div class="contact__form-div contact__form-area">
+              <label for="message" class="contact__form-tag">Mensagem</label>
+              <textarea name="message" id="message" cols="30" rows="10" class="contact__form-input" placeholder="Descreva seu projeto ou dúvida"></textarea>
+            </div>
+            
+            <button type="submit" class="button button--flex">
+              Enviar Mensagem
+              <i class="fa-solid fa-paper-plane button__icon"></i>
+            </button>
+          </form>
+        </div>
+      </div>
     </section>
-
   </main>
 
-  <!-- Rodapé com informações institucionais e de direitos autorais -->
+  <!-- Rodapé -->
   <footer class="footer">
-    <p>&copy; 2025 Minha Empresa - Todos os direitos reservados</p>
+    <div class="footer__container container grid">
+      <div class="footer__content">
+        <a href="#" class="footer__logo">Lucas<span>.</span></a>
+        <p class="footer__description">
+          Desenvolvedor Full Stack criando soluções digitais com foco no usuário.
+        </p>
+      </div>
+      
+      <div class="footer__content">
+        <h3 class="footer__title">Links</h3>
+        <ul class="footer__links">
+          <li><a href="#home" class="footer__link">Início</a></li>
+          <li><a href="#about" class="footer__link">Sobre</a></li>
+          <li><a href="#skills" class="footer__link">Habilidades</a></li>
+          <li><a href="#projects" class="footer__link">Projetos</a></li>
+          <li><a href="#contact" class="footer__link">Contato</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer__content">
+        <h3 class="footer__title">Redes Sociais</h3>
+        <ul class="footer__social">
+          <li>
+            <a href="https://linkedin.com" target="_blank" class="footer__social-link">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com" target="_blank" class="footer__social-link">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank" class="footer__social-link">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/ffelixlucas" target="_blank" class="footer__social-link">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer__info container">
+      <span class="footer__copy">
+        &copy; 2025 Lucas. Todos os direitos reservados.
+      </span>
+      
+      <div class="footer__privacy">
+        <a href="#" class="footer__privacy-link">Termos de Serviço</a>
+        <a href="#" class="footer__privacy-link">Política de Privacidade</a>
+      </div>
+    </div>
   </footer>
-  <!-- Inclusão do JavaScript no final para não bloquear a renderização -->
+
+  <!-- Botão Voltar ao Topo -->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="fa-solid fa-arrow-up scrollup__icon"></i>
+  </a>
+
   <script src="script.js"></script>
 </body>
-
 </html>
