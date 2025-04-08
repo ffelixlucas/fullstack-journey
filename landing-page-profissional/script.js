@@ -1,234 +1,132 @@
-// ===== CONSTANTES =====
-const navToggle = document.getElementById('nav-toggle'),
-      navMenu = document.getElementById('nav-menu'),
-      navClose = document.getElementById('nav-close'),
-      navLinks = document.querySelectorAll('.nav__link'),
-      scrollUp = document.getElementById('scroll-up'),
-      sections = document.querySelectorAll('section[id]');
+// ===== SHOW MENU =====
+const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close');
 
-// ===== MENU SHOW/HIDE =====
-// Menu show
-if(navToggle) {
+// Abrir Menu
+if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu');
+        document.body.style.overflow = 'hidden';
     });
 }
 
-// Menu hide
-if(navClose) {
+// Fechar Menu
+if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
+        document.body.style.overflow = 'auto';
     });
 }
 
-// Close menu when clicking on nav links
-function linkAction() {
-    navMenu.classList.remove('show-menu');
-}
-navLinks.forEach(link => link.addEventListener('click', linkAction));
+// Fechar ao clicar em links
+const navLinks = document.querySelectorAll('.nav__link');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+        document.body.style.overflow = 'auto';
+    });
+});
 
-// ===== CHANGE BACKGROUND HEADER =====
-function scrollHeader() {
-    const header = document.getElementById('header');
-    if(this.scrollY >= 50) {
-        header.classList.add('scroll-header');
-    } else {
-        header.classList.remove('scroll-header');
+// Fechar ao clicar fora
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768 && navMenu.classList.contains('show-menu') && 
+        !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        navMenu.classList.remove('show-menu');
+        document.body.style.overflow = 'auto';
     }
-}
-window.addEventListener('scroll', scrollHeader);
+});
 
-// ===== SHOW SCROLL UP =====
-function scrollUpShow() {
-    if(this.scrollY >= 200) {
-        scrollUp.classList.add('show-scroll');
-    } else {
-        scrollUp.classList.remove('show-scroll');
-    }
-}
-window.addEventListener('scroll', scrollUpShow);
-
-// ===== SCROLL SECTIONS ACTIVE LINK =====
+// ===== SCROLL ATIVO =====
 function scrollActive() {
     const scrollY = window.pageYOffset;
-    
+    const sections = document.querySelectorAll('section[id]');
+
     sections.forEach(section => {
-        const sectionHeight = section.offsetHeight,
-              sectionTop = section.offsetTop - 50,
-              sectionId = section.getAttribute('id');
-        
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 58;
+        const sectionId = section.getAttribute('id');
+
+        const navLink = document.querySelector(`.nav__link[href*="${sectionId}"]`);
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            navLink.classList.add('active');
         } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');
+            navLink.classList.remove('active');
         }
     });
 }
 window.addEventListener('scroll', scrollActive);
 
-// ===== SCROLL REVEAL ANIMATION =====
+// ===== SCROLL UP =====
+function scrollUp() {
+    const scrollUpBtn = document.getElementById('scroll-up');
+    if (window.scrollY >= 350) {
+        scrollUpBtn.classList.add('show');
+    } else {
+        scrollUpBtn.classList.remove('show');
+    }
+}
+window.addEventListener('scroll', scrollUp);
+
+// ===== SCROLL REVEAL =====
 const sr = ScrollReveal({
     origin: 'top',
-    distance: '60px',
-    duration: 2500,
-    delay: 400,
-    // reset: true
+    distance: '40px',
+    duration: 1000,
+    delay: 200,
+    reset: true
 });
 
-sr.reveal('.home__data, .home__social, .home__image');
-sr.reveal('.about__image, .about__content', {origin: 'left'});
-sr.reveal('.skills__content, .projects__container, .contact__content', {interval: 100});
-sr.reveal('.soft-skills__card', {interval: 100, origin: 'bottom'});
+sr.reveal('.home__content, .home__image, .home__social, .home__scroll', { interval: 100 });
+sr.reveal('.about__image, .about__content', { origin: 'left' });
+sr.reveal('.skills__content', { interval: 100 });
+sr.reveal('.project__card', { interval: 100 });
+sr.reveal('.contact__info, .contact__form', { interval: 100 });
+sr.reveal('.footer__container, .footer__bottom', { origin: 'bottom' });
 
-// ===== ANIMAÇÃO DE DIGITAÇÃO =====
-const typed = new Typed('.home__subtitle', {
+// ===== TYPED.JS =====
+const typed = new Typed('.typed-text', {
     strings: ['Desenvolvedor Full Stack', 'Solucionador de Problemas', 'Apaixonado por Tecnologia'],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true
+    typeSpeed: 50,
+    backSpeed: 30,
+    backDelay: 1000,
+    loop: true,
+    showCursor: false
 });
 
-// ===== ANIMAÇÃO DE PARTICULAS =====
-particlesJS('home', {
-    particles: {
-        number: {
-            value: 80,
-            density: {
-                enable: true,
-                value_area: 800
-            }
-        },
-        color: {
-            value: "#ff4d4d"
-        },
-        shape: {
-            type: "circle",
-            stroke: {
-                width: 0,
-                color: "#000000"
-            },
-            polygon: {
-                nb_sides: 5
-            }
-        },
-        opacity: {
-            value: 0.5,
-            random: false,
-            anim: {
-                enable: false,
-                speed: 1,
-                opacity_min: 0.1,
-                sync: false
-            }
-        },
-        size: {
-            value: 3,
-            random: true,
-            anim: {
-                enable: false,
-                speed: 40,
-                size_min: 0.1,
-                sync: false
-            }
-        },
-        line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#ff4d4d",
-            opacity: 0.4,
-            width: 1
-        },
-        move: {
-            enable: true,
-            speed: 2,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 1200
-            }
-        }
-    },
-    interactivity: {
-        detect_on: "canvas",
-        events: {
-            onhover: {
-                enable: true,
-                mode: "grab"
-            },
-            onclick: {
-                enable: true,
-                mode: "push"
-            },
-            resize: true
-        },
-        modes: {
-            grab: {
-                distance: 140,
-                line_linked: {
-                    opacity: 1
-                }
-            },
-            bubble: {
-                distance: 400,
-                size: 40,
-                duration: 2,
-                opacity: 8,
-                speed: 3
-            },
-            repulse: {
-                distance: 200,
-                duration: 0.4
-            },
-            push: {
-                particles_nb: 4
-            },
-            remove: {
-                particles_nb: 2
-            }
-        }
-    },
-    retina_detect: true
+const homeScroll = document.querySelector('.home__scroll');
+homeScroll.addEventListener('click', () => {
+    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
 });
+
 
 // ===== FORMULÁRIO DE CONTATO =====
-const contactForm = document.querySelector('.contact__form'),
-      contactName = document.getElementById('name'),
-      contactEmail = document.getElementById('email'),
-      contactSubject = document.getElementById('subject'),
-      contactMessage = document.getElementById('message');
+const contactForm = document.getElementById('contact-form');
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
-    // Validação simples
-    if(contactName.value === '' || contactEmail.value === '' || contactSubject.value === '' || contactMessage.value === '') {
-        alert('Por favor, preencha todos os campos.');
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !subject || !message) {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Atenção!',
+            text: 'Por favor, preencha todos os campos.',
+            confirmButtonColor: '#2e86de'
+        });
         return;
     }
-    
-    // Simulação de envio
-    alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-    contactForm.reset();
-});
 
-// ===== ANIMAÇÃO AO ROLAR =====
-function animateOnScroll() {
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    
-    elements.forEach(element => {
-        const elementPosition = element.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
-        
-        if(elementPosition < screenPosition) {
-            element.classList.add('animated');
-        }
+    Swal.fire({
+        icon: 'success',
+        title: 'Mensagem Enviada!',
+        text: 'Entrarei em contato em breve.',
+        confirmButtonColor: '#2e86de'
+    }).then(() => {
+        contactForm.reset();
     });
-}
-
-window.addEventListener('scroll', animateOnScroll);
-animateOnScroll(); // Executa uma vez ao carregar a página
+});
