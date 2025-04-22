@@ -1,54 +1,66 @@
 # 📋 Lista de Tarefas Inteligente (JS Puro)
 
-Este projeto é um exercício didático criado como parte da minha formação full stack, focado nos fundamentos do JavaScript puro.  
-O objetivo foi aprender e aplicar, com profundidade, conceitos essenciais como:
-
-- Arrays
-- Objetos
-- Funções
-- Loops (`for`)
-- Condicionais (`if`)
-- Manipulação de dados dinâmicos
+Este projeto foi desenvolvido como parte da minha jornada de aprendizado em JavaScript puro.  
+O objetivo é aplicar e evoluir conceitos fundamentais de programação de forma progressiva e prática, sempre com código limpo, organizado e com propósito real.
 
 ---
 
-## 🚀 O que este projeto faz
+## 🧱 Versões do Projeto
 
-- Armazena uma lista de tarefas com nome e status (pendente/concluída)
-- Permite marcar tarefas como concluídas por número
-- Exibe apenas as tarefas pendentes
-- Controla a numeração da lista de forma limpa (sem pular números)
-
----
-
-## 📚 O que foi aprendido aqui
-
-✔ Diferença entre índice interno e exibição para o usuário  
-✔ Como usar `for` com `if` de forma estruturada  
-✔ Como criar funções reutilizáveis com parâmetros  
-✔ Como alterar dados dentro de um array de objetos  
-✔ Importância da indentação na leitura e lógica do código  
-✔ Pensamento progressivo: construir primeiro, refatorar depois
+| Versão | Funcionalidades |
+|--------|------------------|
+| [main.js](./main.js) | Concluir tarefas e exibir apenas pendentes |
+| [versao-2-remocao.js](./versao-2-remocao.js) | Remover e adicionar tarefas dinamicamente |
 
 ---
 
-## 💡 Por que este projeto está aqui?
+## ✅ Versão 1 — Conclusão de Tarefas
 
-Este repositório não é visualmente bonito.  
-Mas ele representa um momento real da jornada: **a hora em que parei de copiar código e comecei a entender cada linha**.
+### 📌 Funcionalidades:
+- Armazena tarefas em um array de objetos
+- Marca uma tarefa como concluída via `concluirTarefa(numero)`
+- Exibe apenas as tarefas **não concluídas**
+- Usa contador separado para numerar a exibição corretamente
 
-É o primeiro passo para construir sistemas maiores e mais completos com base sólida e raciocínio limpo.
+### 📘 Conceitos aplicados:
+- Arrays de objetos
+- Condicionais com `if`
+- Loops com `for`
+- Boas práticas de identação
+- Separação entre exibição e dados internos
+
+### 📂 Arquivo: `main.js`
 
 ---
 
-## 🧠 Próximos passos (possíveis evoluções futuras)
+## ✨ Versão 2 — Remoção e Adição de Tarefas
 
-- Adicionar uma interface HTML/CSS simples
-- Criar campos de entrada e botões para adicionar e concluir tarefas
-- Armazenar tarefas em `localStorage`
-- Evoluir para um app em React com estados
+### 📌 Novas funcionalidades:
+
+- `removerTarefa(numero)`  
+  Remove uma tarefa do array com `.splice()`
+
+- `adicionarTarefa(nome)`  
+  Adiciona uma nova tarefa no final da lista com `.push()`
+
+- `converterNumeroParaIndice(numero)`  
+  Função auxiliar para padronizar a conversão de número visível para índice real
+
+### 📘 Conceitos aplicados:
+- Criação de funções reutilizáveis
+- Uso de `.splice()` para manipulação de arrays
+- Uso de `.push()` para crescimento dinâmico da lista
+- Código limpo com responsabilidade única
+
+### 📂 Arquivo: `versao-2-remocao.js`
 
 ---
 
-**Lucas Felix — Desenvolvedor em constante evolução 🚀**  
-Projeto integrante da pasta: `fullstack-journey-novo`
+## 🚀 Objetivo do projeto
+
+Este projeto representa uma etapa importante na minha transição de um programador iniciante para um desenvolvedor com base sólida.  
+Ele marca o momento onde parei de copiar código e comecei a **pensar e construir com clareza.**
+
+---
+
+**Lucas Felix — Desenvolvedor Full Stack em evolução constante 🚀**
